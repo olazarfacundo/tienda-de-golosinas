@@ -21,7 +21,7 @@ export default function Compras(props) {
     }
 
 
-    const text = props.carrito.reduce((mensaje, producto) => mensaje.concat(`* ${producto.nombre} - $${producto.precio * producto.cantidad}\n`), ``).concat(`\nTotal: $${precioTotal()}`)
+    const text = props.carrito.reduce((mensaje, producto) => mensaje.concat(`* ${producto.nombre} x ${producto.cantidad} - $${producto.precio * producto.cantidad}\n`), ``).concat(`\nTotal: $${precioTotal()}`)
 
     return (
         <div className="contenedor-carrito">
