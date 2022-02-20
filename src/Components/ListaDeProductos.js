@@ -37,7 +37,7 @@ export default function ListaDeProductos(props) {
             break;
     }
 
-    props.busqueda.length > 3 ? porNombre = productos.filter(e => normalizar(e.nombre).includes(props.busqueda)) : porNombre = productos
+    props.busqueda.length > 3 ? porNombre = productos.filter(e => normalizar(e.nombre).includes(normalizar(props.busqueda))) : porNombre = productos
 
     return (
         <>
